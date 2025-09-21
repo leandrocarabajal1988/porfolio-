@@ -1,0 +1,282 @@
+#inicio {
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center;     /* Centra horizontalmente */
+  padding: 40px;
+  text-align: center;      /* Centra el texto */
+}
+
+#inicio img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/*================================= MENU ====================================*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0f97b2; /* o el color que prefieras */
+  z-index: 1000;           /* asegura que esté por encima de otros elementos */
+  padding: 10px 20px;
+}
+
+header nav ul {
+  display: flex;              /* pone los <li> en fila */
+  justify-content: center;    /* centra horizontalmente */
+  list-style: none;           /* quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 40px;             /* espacio entre los links */
+}
+
+header nav ul li a {
+  color: white;               /* color del texto */
+  text-decoration: none;      /* quita subrayado */
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #8400ff;             /* cambia color al pasar el mouse */
+}
+
+/*================================= HISTORIA ====================================*/
+#historia h2 {
+  text-align: center;
+}
+
+.bloque-doble {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* espacio entre bloques */
+  flex-wrap: wrap; /* permite que se acomoden en pantallas pequeñas */
+}
+
+.bloque-doble section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+ /* Centrado vertical y horizontal */
+.bloque-doble h2 {
+  text-align: center;
+  padding: 20px;
+}
+/*================================= CONOCIMIENTO ====================================*/
+
+#conocimientos ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#conocimientos i {
+  margin-right: 10px;
+  color: #0f97b2; /* o el color que prefieras */
+}
+
+
+/*================================= PROYECTOS ====================================*/
+#proyectos  h2 {
+  text-align: center;
+   padding: 20px;
+}
+
+.proyecto {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(222, 41, 50, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.bloque-doble {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px; /* aumentamos el espacio entre los bloques */
+  flex-wrap: wrap;
+  padding: 20px 40px;
+}
+
+.galeria-videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas iguales */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* centra cada video dentro de su celda */
+  background-color: #f4f4f4;
+}
+
+.galeria-videos video {
+  width: 100%;
+  max-width: 200px;
+  height: 120px; /* Ajuste por tamaño */
+  object-fit: contain;
+}
+
+.galeria-videos video {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.galeria-videos video:hover {
+  transform: scale(2.1);
+}
+
+ img {
+  width: 190px;
+  margin-bottom: 20px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: 0 0 20px #000;
+}
+
+.modal:target {
+  display: block;
+}
+.galeria-videos img:hover {
+  transition: transform 0.3s;
+
+  transform: scale(2.1);
+}
+
+.carrusel {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.activo {
+  opacity: 1;
+}
+
+/*================================= REDES ====================================*/
+#redes {
+  text-align: center;
+  padding: 40px;
+}
+
+#redes h2 {
+  text-align: center;
+  font-size: 2rem; /* tamaño del título */
+  margin-bottom: 20px;
+}
+
+#redes a {
+  font-size: 2.4rem; /* 20% más grande que 2rem */
+  margin: 0 15px;
+  color: #0f97b2;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+#redes a:hover {
+  color: #8400ff;
+}
+
+/*================================= CONTACTO ====================================*/
+#contacto {
+  background-color: #f4f4f4; /* fondo gris claro */
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto; /* centra horizontalmente */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contacto textarea {
+  min-height: 120px;
+}
+
+#contacto button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #0f97b2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contacto button:hover {
+  background-color: #8400ff;
+}
+
+/*================================ FONDO =============================*/
+body {
+  background-image: url("../img/fondo.jpg"); /* Cambiá por el nombre real del archivo */
+  background-size: cover;        /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center;   /* Centra la imagen */
+  background-attachment: fixed;  /* Hace que el fondo no se desplace al hacer scroll */
+  background-repeat: no-repeat;  /* Evita que se repita */
+  color: rgb(0, 0, 0);                  /* Opcional: mejora contraste si el fondo es oscuro */
+}
+
+ body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(213, 229, 233, 0.86); /* negro con 40% opacidad */
+  z-index: -1;
+} 

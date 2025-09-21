@@ -1,0 +1,149 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Leandro Carabajal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- Menú -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#info">Información</a></li>
+        <li><a href="#conocimientos">Conocimientos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Presentación -->
+  <section id="inicio">
+    <img src="img/foto_perfil.jpg" alt="Foto personal">
+    <h1>Hola, soy Leandro</h1>
+    <p>Ingeniero Electrico / Estudiante de programación / desarrollador en formación</p>
+  </section>
+
+  <!-- Información general -->
+     <section id="historia">
+    <h2>Mi Historia</h2>
+
+  <div class="bloque-doble">
+  <section id="info">
+    <h2>Sobre mí</h2>
+    <p>De Bachiller en gestión de empresas a Ingeniero Eléctrico y futuro Programador.
+     Actualmente estoy incorporando conocimientos en programación para lograr la conjunción 
+     de tres mundos que me apasionan: la gestión, la ingeniería eléctrica y el desarrollo de software.</p>
+  </section>
+
+  <!-- Conocimientos -->
+  <section id="conocimientos">
+    <h2>Conocimientos</h2>
+  <ul>
+    <li><i class="fab fa-html5"></i> HTML</li>
+    <li><i class="fas fa-code"></i> C# y .NET</li>
+    <li><i class="fas fa-microchip"></i> C++</li>
+  </ul>
+</section>
+
+  </div>
+
+  <!-- Proyectos -->
+<section id="proyectos">
+  <h2 class="titulo-centrado">Mis Proyectos</h2>
+
+  <div class="bloque-doble">
+    <!-- Proyecto Klostervania -->
+    <div class="proyecto">
+      <h2 class="titulo-centrado">Klostervania</h2>
+      <p style="text-align: center;">Juego en C++ con SFML.</p>
+
+      <div class="galeria-videos">
+        <video src="videos/klostervania1.mp4" controls></video>
+        <video src="videos/klostervania2.mp4" controls></video>
+        <video src="videos/klostervania3.mp4" controls></video>
+        <video src="videos/klostervania4.mp4" controls></video>
+        <video src="videos/klostervania5.mp4" controls></video>
+        <img src="img/klostervania.jpg" alt="Foto klostervania">
+      </div>
+
+            <div class="carrusel">
+        <img src="img/personaje1.png" class="slide activo">
+        <img src="img/personaje2.png" class="slide">
+        <img src="img/personaje3.png" class="slide">
+        <img src="img/personaje4.png" class="slide">
+        <img src="img/personaje5.png" class="slide">
+        <img src="img/personaje6.png" class="slide">
+      </div>
+    </div>
+
+    <!-- Proyecto Dados -->
+    <div class="proyecto">
+      <h2 class="titulo-centrado">Greed</h2>
+      <p style="text-align: center;">Proyecto en C++.</p>
+    <div class="galeria-videos">
+        <video src="videos/Greed1.mp4" controls></video>
+        <video src="videos/Greed2.mp4" controls></video>
+        <video src="videos/Greed3.mp4" controls></video>
+        <video src="videos/Greed4.mp4" controls></video>
+        <img src="img/Greed1.jpg" alt="Foto Greed1">
+        <img src="img/Greed2.jpg" alt="Foto Greed2">
+    </div>
+      <div class="carrusel">
+        <img src="img/greed3.png" class="slide activo">
+        <img src="img/greed4.png" class="slide">
+        <img src="img/greed5.png" class="slide">
+        <img src="img/greed4.png" class="slide">
+        <img src="img/greed6.png" class="slide">
+        <img src="img/greed7.png" class="slide">
+        </div>
+
+    </div>
+</section>
+
+
+  <!-- Redes -->
+  <section id="redes">
+    <h2>Mis Redes</h2>
+    <a href="https://linkedin.com/in/leandro-carabajal-67b53516b" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/leandrocarabajal1988" target="_blank"><i class="fab fa-github"></i></a>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+<form action="https://formsubmit.co/leandro_carabajal@yahoo.com.ar" method="POST">
+  <input type="text" name="nombre" placeholder="Nombre" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <textarea name="mensaje" placeholder="Mensaje"></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Leandro Carabajal - Portfolio</p>
+  </footer>
+  
+<script>
+  document.querySelectorAll('.carrusel').forEach(carrusel => {
+    let index = 0;
+    const slides = carrusel.querySelectorAll('.slide');
+
+    setInterval(() => {
+      slides[index].classList.remove('activo');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('activo');
+    }, 3000);
+  });
+</script>
+
+
+
+</body>
+</html>
